@@ -1,7 +1,4 @@
-import * as Application from "application";
-import * as Dialogs from "ui/dialogs";
-import * as Utility from "utils/utils";
-import * as ApplicationSettings from "application-settings";
+import {ApplicationSettings, Dialogs, Utils, Application} from "@nativescript/core";
 
 declare var android: any;
 
@@ -58,7 +55,7 @@ export class Ratings {
                         } else if (Application.ios) {
                             appStore = "itms-apps://itunes.apple.com/en/app/id" + this.configuration.iTunesAppId;
                         }
-                        Utility.openUrl(appStore);
+                        Utils.openUrl(appStore);
                     } else if (result == false) {
                         // Decline
                     } else {
